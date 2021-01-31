@@ -1,0 +1,109 @@
+<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08"
+    aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-md-center">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link text-white" [routerLink]="['/sobre-mi']"
+          [routerLinkActive]="['actived']">Sobre Mi</a></li>
+      <li class="nav-item"><a class="nav-link text-white" [routerLink]="['/proyectos']"
+          [routerLinkActive]="['actived']">Proyectos</a></li>
+      <li class="nav-item" style="font-size: 25px;"> <a class="nav-link text-white finger text-bold"
+          [routerLink]="['/sobre-mi']" style="margin-top: -9%;">MR</a> </li>
+      <li class="nav-item"><a class="nav-link text-white" [routerLink]="['/crear']"
+          [routerLinkActive]="['actived']">Crear</a></li>
+      <li class="nav-item"><a class="nav-link text-white" [routerLink]="['/contacto']"
+          [routerLinkActive]="['actived']">Contacto</a></li>
+
+
+    </ul>
+  </div>
+</nav>>
+
+<div id="principal">
+  <div class="container">
+    <div class="row">
+      <div id="colhome" class="col-md-12 bg-white mt-4 ml-4 mr-4 shadow p-3 mb-5 rounded yanone">
+
+        <h3 id="projects_title" class="yanone text-center">Proyectos</h3>
+        <hr id="projects_line">
+
+
+        <div class="d-flex flex-wrap">
+          <div class="card ml-5 mt-3 mb-3" *ngFor="let project of projects" style="width: 18rem;">
+            
+            <!--
+            <img class="card-img-top imgproject" id="img_details" src="../../../assets/uploads/{{project.image}}">
+            -->
+            <img class="card-img-top imgproject" id="img_details" src="{{url}}get-image/{{project.image}}" *ngIf="project.image">
+
+            
+            <div class="card-body">
+              <h4 class="card-title text-center border-bottom border-dark font-weight-bold">{{project.name}}</h4>
+              <ul>
+                <li class="card-text ml-3">{{project.category}}</li>
+                <li class="card-text ml-3">{{project.description}}</li>
+              </ul>
+              <span class="card-text text-left" ><small class="text-muted">{{project.year}}</small></span>
+              <a id="button_details" class="btn btn-outline-dark" [routerLink]="['/proyecto', project._id]">Detalles</a>
+
+            </div>
+          </div>
+
+
+        </div>
+
+
+
+
+
+        <!--
+
+                <div class="col-md-3"><ul>
+                  <li *ngFor="let project of projects">
+                    
+                    <div class="card-deck">
+                      <div class="card">
+                        <img class="card-img-top" src="../../../assets/uploads/{{project.image}}" alt="Card image cap" width="200px" height="200px">
+                        <div class="card-body">
+                          <h5 class="card-title">{{project.name}}</h5>
+                          <p class="card-text">{{project.category}}</p>
+                          <p class="card-text"><small class="text-muted">{{project.year}}</small></p>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </li>
+                </ul></div>
+            -->
+
+
+        <!--
+                    <img src="{{url+'show-image/'+project.image}}" *ngIf="project.image" > 
+                    -->
+
+
+
+
+
+        <!--
+
+                <img src="https://via.placeholder.com/200x200" alt="project" class="img-thumbnail border border-dark m-2 text-left">
+                -->
+
+
+
+
+
+
+      </div>
+
+
+    </div>
+  </div>
+
+</div>

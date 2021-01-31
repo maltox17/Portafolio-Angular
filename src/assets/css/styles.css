@@ -1,0 +1,134 @@
+/* Importar fuentes custom*/
+@font-face{
+	font-family: "yanone";
+	src: url("fonts/yanone.ttf");
+}
+
+@font-face{
+	font-family: "finger";
+	src: url("fonts/finger.ttf");
+}
+
+/*Generales*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.yanone{
+	font-family: "yanone";
+}
+
+.finger{
+	font-family: "finger";
+}
+
+body{
+	font-family: "yanone", Arial, Helvetica;
+	font-size: 20px;
+	background: url("../img/pattern.png");
+	background-attachment: fixed;
+}
+
+.clearfix{
+	float:none;
+	clear:both;
+}
+
+/*Barra de navegacion / cabecera*/
+
+#navbar{
+	background-color: rgba(39, 86, 145, 0.6);
+	font-family: "yanone", Arial, Helvetica;
+	font-size: 1.2rem;
+	width:100%;
+
+}
+
+#navbar ul li{
+	margin-left: 5%;
+}
+
+#navbar ul li:first-child{
+margin-left: -27%;
+}
+
+#navbar a:hover,
+#navbar ul li:hover,
+.actived{
+	color: #ccc !important;
+	background: black;
+}
+
+#h1_line,
+.h1_line{
+	margin-left: 15%;
+	background: black;
+}
+
+#title{
+font-size: 3.5rem;
+color: black;
+font-weight: bold;
+}
+
+#title_h4{
+	color: dimgray;
+	margin-top: -1%;
+	font-family: "yanone", Arial, Helvetica;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+#about_title{
+	font-weight: bold;
+	color: black;
+	margin-top: 7rem;
+}
+
+
+.about_line{
+	background-color: #ccc;
+	height: 1px;
+}
+
+#about_line{
+	width: 86%;
+	margin-left:4%;
+
+}
+
+#about_text{
+	text-align: justify;
+	margin-left: 4%;
+	margin-right: 11%;
+	font-size: 1.2rem;
+}
+
+
+#projects_title{
+	color:black;
+	font-weight: bold;
+	font-size: 2.5rem;
+
+}
+
+#projects_line{
+
+	border: 1px dashed;
+}
+
+.imgproject{
+	width: 17.9rem;
+	height: 17rem;
+}
+
+#button_details{
+	margin-left: 9.5rem;
+}
+
+#imgdetails{
+	width: 20rem;
+	height: 20rem;
+}
